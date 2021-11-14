@@ -1,0 +1,11 @@
+# emacs:
+*~
+\#*\#
+
+# Other stuff:
+*.o
+*.log
+*.out
+out.dir
+logs
+exec

@@ -1,0 +1,9 @@
+[user]
+	name = Ying Lin
+	email = ying.lin@noaa.gov
+[core]
+	excludesfile = /u/Ying.Lin/.gitignore_global
+[credential]
+ 	helper = store --file ~/.git-credentials
+[credential "https://github.com"]
+	username = YingLin-NOAA 
