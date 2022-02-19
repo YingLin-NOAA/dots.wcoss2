@@ -1,0 +1,2 @@
+set cpoptions+=x
+
