@@ -24,6 +24,11 @@ module load grib_util/1.2.3
 SOS=/u/Ying.Lin/sos
 DOTS=/u/Ying.Lin/dots
 
+alias nwprod='cd /lfs/h1/ops/prod/packages'
+alias com='cd /lfs/h1/ops/prod/com'
+alias comout='cd /lfs/h1/ops/prod/output'
+alias logs='cd /lfs/h1/ops/prod/logs'
+
 alias dcom='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today'
 alias dcomtxt='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today/wtxtbul' 
 alias mrms='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms'
@@ -40,10 +45,13 @@ alias lsd='ls -d */'
 alias xv=display
 
 alias mecf=/u/Ying.Lin/sos/mecfl_win_gfe.sh
+# on wcoss2, vi/view defaults to going to the last location in the file
+#   (tracked by ~/.viminfo).  use the '+1' option to open at the top instead,
+#   for spalog. 
 # View the SPA Log:
-alias vspalog='view /lfs/h1/ops/prod/logs/spalog'
+alias vspalog='view +1 /lfs/h1/ops/prod/logs/spalog'
 # Edit the SPA log:
-alias espalog='/lfs/h1/ops/prod/logs/editspalog'
+alias espalog='/lfs/h1/ops/prod/logs/editspalog +1'
 
 alias sos='cd $SOS'
 alias dots='cd $DOTS'
@@ -53,14 +61,6 @@ alias sevlog='view /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
 
 
 # WCOSS1 stuff: 
-#  module load ips/18.0.1.163
-#  module load impi/18.0.1
-#  module load lsf/10.1
-#  module load prod_util/1.1.5
-#  module load HPSS/5.0.2.5
-
-  # mecf script sending text alert to phone:
-
 
   #Python:
 #  module load python/3.6.3
@@ -70,21 +70,9 @@ alias sevlog='view /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
 #  module use -a /usrx/local/dev/modulefiles
 #  module load GrADS/2.2.0
 
-alias nwprod='cd /gpfs/$disk/nco/ops/nwprod'
-alias com1='cd /gpfs/dell1/nco/ops/com'
-alias com2='cd /gpfs/dell2/nco/ops/com'
-alias comcray='cd /gpfs/hps/nco/ops/com'
-alias comout='cd /gpfs/$disk/nco/ops/com/output/prod'
-alias logs='cd $DELLLOG'
-
 
 # 2020/06/13 for SOS work:
 # To view the current SPA on-call file:
-DELLLOG=/gpfs/dell1/nco/ops/com/logs
-CRAYLOG=/gpfs/hps/nco/ops/com/logs
-alias spaoncall='view $DELLLOG/spa.oncall'
-# View sev msg logs:
-#
 #
 # Check hurricane setup:
 alias chkhur='$SOS/chkhur'
