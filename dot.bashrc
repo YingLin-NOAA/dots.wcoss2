@@ -47,17 +47,17 @@ alias xv=display
 alias mecf=/u/Ying.Lin/sos/mecfl_win_gfe.sh
 # on wcoss2, vi/view defaults to going to the last location in the file
 #   (tracked by ~/.viminfo).  use the '+1' option to open at the top instead,
-#   for spalog. 
+#   for vspalog.  However 'espalog +1' doesn't work. 
 # View the SPA Log:
 alias vspalog='view +1 /lfs/h1/ops/prod/logs/spalog'
 # Edit the SPA log:
-alias espalog='/lfs/h1/ops/prod/logs/editspalog +1'
+alias espalog='/lfs/h1/ops/prod/logs/editspalog'
 
 alias sos='cd $SOS'
 alias dots='cd $DOTS'
 alias where='watch --interval=600 "hostname"'
 #
-alias sevlog='view /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
+alias sevlog='view + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
 
 
 # WCOSS1 stuff: 
