@@ -56,6 +56,8 @@ alias espalog='/lfs/h1/ops/prod/logs/editspalog'
 alias sos='cd $SOS'
 alias dots='cd $DOTS'
 alias where='watch --interval=600 "hostname"'
+alias q='watch --interval=300 "qstat -q"'
+alias Q='watch --interval=300 "qstat -Q"'
 #
 alias sevlog='view + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
 
