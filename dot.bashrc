@@ -44,7 +44,7 @@ alias rm='rm -i'
 alias lsd='ls -d */'
 alias xv=display
 
-alias mecf=/u/Ying.Lin/sos/mecfl_win_gfe.sh
+alias mecf=/u/Ying.Lin/sos/mecfl_bell.sh
 # on wcoss2, vi/view defaults to going to the last location in the file
 #   (tracked by ~/.viminfo).  use the '+1' option to open at the top instead,
 #   for vspalog.  However 'espalog +1' doesn't work. 
