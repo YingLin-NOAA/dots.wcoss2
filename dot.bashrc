@@ -31,7 +31,10 @@ alias logs='cd /lfs/h1/ops/prod/logs'
 
 alias dcom='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today'
 alias dcomtxt='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today/wtxtbul' 
-alias mrms='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms'
+alias mrms='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms/conus/RadarOnly_QPE'
+alias mrmslmp='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms/conus/MergedReflectivityQCComposite'
+# for jcp_analysis: 
+alias abi='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/GOES-16/ABI'
 
 alias ecfdir='cd /lfs/h1/ops/prod/output/ecflow'
 
@@ -53,7 +56,9 @@ alias vspalog='view +1 /lfs/h1/ops/prod/logs/spalog'
 # Edit the SPA log:
 alias espalog='/lfs/h1/ops/prod/logs/editspalog'
 
+alias spaoncall='view /lfs/h1/ops/prod/packages/spa_on_call.v1.0.0/fix/spa.oncall'
 alias sos='cd $SOS'
+alias dev='cd ~/dev'
 alias dots='cd $DOTS'
 alias where='watch --interval=600 "hostname"'
 alias q='watch --interval=30 "qstat -q"'
