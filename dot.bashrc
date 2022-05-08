@@ -65,7 +65,8 @@ alias q='watch --interval=30 "qstat -q"'
 alias Q='watch --interval=30 "qstat -Q"'
 #
 alias sevlog='view + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
-
+# run this from cmon01/dmon01 (show Sev codes in real time):
+alias kafka=/ifs/kafka/scripts/nelConsole
 
 # WCOSS1 stuff: 
 
