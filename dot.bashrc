@@ -8,6 +8,7 @@ fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+export PATH="$PATH:/u/Ying.Lin/sos"
 # for ecf ui:
 module load intel ecflow
 
