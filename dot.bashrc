@@ -30,6 +30,8 @@ alias com='cd /lfs/h1/ops/prod/com'
 alias comout='cd /lfs/h1/ops/prod/output'
 alias logs='cd /lfs/h1/ops/prod/logs'
 
+alias prod='cat /lfs/h1/ops/prod/config/prodmachinefile'
+
 alias dcom='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today'
 alias dcomtxt='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today/wtxtbul' 
 alias mrms='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms/conus/RadarOnly_QPE'
@@ -64,6 +66,7 @@ alias dots='cd $DOTS'
 alias where='watch --interval=600 "hostname"'
 alias q='watch --interval=30 "qstat -q"'
 alias Q='watch --interval=30 "qstat -Q"'
+alias held='qstat -u ops.prod | grep " H "'
 #
 alias sevlog='view + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
 # run this from cmon01/dmon01 (show Sev codes in real time):
