@@ -22,8 +22,8 @@ module load wgrib2/2.0.8
 module load libjpeg/9c  # needed for grib_util/1.2.3
 module load grib_util/1.2.3
 
-SOS=/u/Ying.Lin/sos
-DOTS=/u/Ying.Lin/dots
+SOS=/u/$USER/sos
+DOTS=/u/$USER/dots
 
 alias nwprod='cd /lfs/h1/ops/prod/packages'
 alias com='cd /lfs/h1/ops/prod/com'
@@ -41,16 +41,16 @@ alias abi='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/GOES-16/ABI'
 
 alias ecfdir='cd /lfs/h1/ops/prod/output/ecflow'
 
-alias save='cd /lfs/h1/nco/omb/save/Ying.Lin'
-alias noscrub='cd /lfs/h1/nco/omb/noscrub/Ying.Lin'
-alias ptmp='dir=/lfs/h1/nco/ptmp/Ying.Lin; if [ ! -d $dir ]; then mkdir -p $dir; fi; cd $dir'
-alias stmp='dir=/lfs/h1/nco/stmp/Ying.Lin; if [ ! -d $dir ]; then mkdir -p $dir; fi; cd $dir'
+alias save='cd /lfs/h1/nco/omb/save/$USER'
+alias noscrub='cd /lfs/h1/nco/omb/noscrub/$USER'
+alias ptmp='dir=/lfs/h1/nco/ptmp/${USER}; if [ ! -d $dir ]; then mkdir -p $dir; fi; cd $dir'
+alias stmp='dir=/lfs/h1/nco/stmp/${USER}; if [ ! -d $dir ]; then mkdir -p $dir; fi; cd $dir'
 
 alias rm='rm -i' 
 alias lsd='ls -d */'
 alias xv=display
 
-alias mecf=/u/Ying.Lin/sos/mecfl_bell.sh
+alias mecf=/u/$USER/sos/mecfl_bell.sh
 # on wcoss2, vi/view defaults to going to the last location in the file
 #   (tracked by ~/.viminfo).  use the '+1' option to open at the top instead,
 #   for vspalog.  However 'espalog +1' doesn't work. 
@@ -104,7 +104,7 @@ alias bh='bhist -l'
 alias dcomwatch=$SOS/watch_for.sh
 alias timeleft=$SOS/timeleft.sh
 alias timeleft_watch=$SOS/timeleft_watch.sh
-alias elog="/u/Ying.Lin/sos/ecflog_summary.sh"
+alias elog="/u/$USER/sos/ecflog_summary.sh"
 # run log as above, then 'view' the output, opening at its end (the script
 # the log summary file name.  Note that "view + `/u/Ying.Lin/sos/ecflog_summary.sh`"
 # would just open up the script for view, that's why I'm using "view + `log`".
