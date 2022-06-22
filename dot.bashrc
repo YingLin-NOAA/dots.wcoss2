@@ -67,6 +67,7 @@ alias where='watch --interval=600 "hostname"'
 alias q='watch --interval=30 "qstat -q"'
 alias Q='watch --interval=30 "qstat -Q"'
 alias held='qstat -u ops.prod | grep " H "'
+alias qprod='qstat -u ops.prod'
 #
 alias sevlog='view + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
 # run this from cmon01/dmon01 (show Sev codes in real time):
@@ -100,7 +101,6 @@ alias chkdump=$SOS/chk_dump.sh
 alias clock=$SOS/clock.sh
 alias xterms=$SOS/xterms.sh
 alias killxterms=$SOS/kill_xterms.sh
-alias bh='bhist -l'
 alias dcomwatch=$SOS/watch_for.sh
 alias timeleft=$SOS/timeleft.sh
 alias timeleft_watch=$SOS/timeleft_watch.sh
