@@ -59,7 +59,7 @@ alias vspalog='view +1 /lfs/h1/ops/prod/logs/spalog'
 # Edit the SPA log:
 alias espalog='/lfs/h1/ops/prod/logs/editspalog'
 
-alias spaoncall='view /lfs/h1/ops/prod/packages/spa_on_call.v1.0.0/fix/spa.oncall'
+alias spaoncall='view /lfs/h1/ops/prod/logs/spa.oncall'
 alias sos='cd $SOS'
 alias dev='cd ~/dev'
 alias dots='cd $DOTS'
@@ -90,15 +90,14 @@ alias kafka=/ifs/kafka/scripts/nelConsole
 # Check hurricane setup:
 alias chkhur='$SOS/chkhur'
 #
-# free compute nodes:
-alias freenodes='/gpfs/dell1/nco/omb/noscrub/Ying.Lin/scripts/tail_nodes_log.sh'
+# free compute nodes: does not have the wcoss1 equivalent.  
+# alias freenodes='/gpfs/dell1/nco/omb/noscrub/Ying.Lin/scripts/tail_nodes_log.sh'
 #
 # save working directory for a failured job on ecf_ui:
-alias savedir=$SOS/save_wk_dir.sh
 alias chkfail=$SOS/chk_failure.sh
 alias failed=$SOS/failed.sh
 alias chkdump=$SOS/chk_dump.sh
-alias clock=$SOS/clock.sh
+alias clock=$SOS/run_clock.sh
 alias xterms=$SOS/xterms.sh
 alias killxterms=$SOS/kill_xterms.sh
 alias dcomwatch=$SOS/watch_for.sh
@@ -111,8 +110,7 @@ alias elog="/u/$USER/sos/ecflog_summary.sh"
 alias elogv="view + `elog`"
 
 # Command line inventory for MDL's TDLPACK'd files: 
-#alias itdlp=/gpfs/dell1/nco/ops/nwprod/blend.v4.0.5/exec/itdlp
-
+alias itdlp=/lfs/h1/ops/prod/packages/blend.v4.0.12/exec/itdlp
 
 # So that cron'd jobs can find the current directory:
 export PATH="$PATH":./
