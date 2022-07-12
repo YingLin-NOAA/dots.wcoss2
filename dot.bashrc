@@ -99,6 +99,7 @@ alias failed=$SOS/failed.sh
 alias chkdump=$SOS/chk_dump.sh
 alias clock=$SOS/run_clock.sh
 alias xterms=$SOS/xterms.sh
+alias xterms_lnx=$SOS/xterms_lnx.sh
 alias killxterms=$SOS/kill_xterms.sh
 alias dcomwatch=$SOS/watch_for.sh
 alias timeleft=$SOS/timeleft.sh
@@ -112,5 +113,6 @@ alias elogv="view + `elog`"
 # Command line inventory for MDL's TDLPACK'd files: 
 alias itdlp=/lfs/h1/ops/prod/packages/blend.v4.0.12/exec/itdlp
 
-# So that cron'd jobs can find the current directory:
-export PATH="$PATH":./
+# So that cron'd jobs can find the current directory; also add /usr/sbin
+#   for 'traceroute':
+export PATH="$PATH":./:/usr/sbin/
