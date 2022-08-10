@@ -66,7 +66,9 @@ alias dots='cd $DOTS'
 alias where='watch --interval=600 "hostname"'
 alias q='watch --interval=30 "qstat -q"'
 alias Q='watch --interval=30 "qstat -Q"'
-alias held='qstat -u ops.prod | grep " H "'
+# alias held='qstat -u ops.prod | grep " H "'
+# the '-w' option gives longer job names before truncating:
+alias held='qstat -u ops.prod -w | grep " H "'
 alias qprod='qstat -u ops.prod'
 #
 alias sevlog='view + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
