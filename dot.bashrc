@@ -48,6 +48,7 @@ alias stmp='dir=/lfs/h1/nco/stmp/${USER}; if [ ! -d $dir ]; then mkdir -p $dir; 
 
 alias rm='rm -i' 
 alias lsd='ls -d */'
+alias lss='ls -lc --time-style="+%Y%m%d %H:%M:%S"'  # showing seconds
 alias xv=display
 
 alias mecf=/u/$USER/sos/mecfl_bell.sh
@@ -114,6 +115,8 @@ alias elogv="view + `elog`"
 
 # Command line inventory for MDL's TDLPACK'd files: 
 alias itdlp=/lfs/h1/ops/prod/packages/blend.v4.0.12/exec/itdlp
+
+alias ncdump=/apps/prod/hpc-stack/intel-19.1.3.304/netcdf/4.7.4/bin/ncdump
 
 # So that cron'd jobs can find the current directory; also add /usr/sbin
 #   for 'traceroute':
