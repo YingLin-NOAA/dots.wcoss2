@@ -93,8 +93,7 @@ alias kafka=/ifs/kafka/scripts/nelConsole
 # Check hurricane setup:
 alias chkhur='$SOS/chkhur'
 #
-# free compute nodes: does not have the wcoss1 equivalent.  
-# alias freenodes='/gpfs/dell1/nco/omb/noscrub/Ying.Lin/scripts/tail_nodes_log.sh'
+alias freenodes="pbsnodes -av | grep 'state = free' | wc -l"
 #
 # save working directory for a failured job on ecf_ui:
 alias chkfail=$SOS/chk_failure.sh
