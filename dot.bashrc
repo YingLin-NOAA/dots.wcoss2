@@ -73,6 +73,7 @@ alias held='qstat -u ops.prod -w | grep " H "'
 alias qprod='qstat -u ops.prod'
 #
 alias sevlog='view + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
+alias sevtail='watch --interval 30 "grep Sev1 /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log | tail"'
 # run this from cmon01/dmon01 (show Sev codes in real time):
 alias kafka=/ifs/kafka/scripts/nelConsole
 
