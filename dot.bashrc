@@ -98,6 +98,7 @@ alias freenodes="pbsnodes -av | grep 'state = free' | wc -l"
 #
 # save working directory for a failured job on ecf_ui:
 alias chkfail=$SOS/chk_failure.sh
+alias chkw=$SOS/chk_walltime.sh
 alias failed=$SOS/failed.sh
 alias chkdump=$SOS/chk_dump.sh
 alias clock=$SOS/run_clock.sh
