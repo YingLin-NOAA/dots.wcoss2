@@ -122,3 +122,7 @@ alias ncdump=/apps/prod/hpc-stack/intel-19.1.3.304/netcdf/4.7.4/bin/ncdump
 # So that cron'd jobs can find the current directory; also add /usr/sbin
 #   for 'traceroute':
 export PATH="$PATH":./:/usr/sbin/
+
+# /opt/pbs/bin/tracejob does not seem to work:
+alias tracejob=/sfs/admin/scripts/tracejob.sh
+
