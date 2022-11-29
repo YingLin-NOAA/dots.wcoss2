@@ -77,8 +77,10 @@ alias sevtail='watch --interval 30 "grep Sev1 /lfs/h1/ops/prod/com/ecflow/sev_mo
 # run this from cmon01/dmon01 (show Sev codes in real time):
 alias kafka=/ifs/kafka/scripts/nelConsole
 
-# WCOSS1 stuff: 
+# In case the file contains an binary character:
+alias grep='grep -a'
 
+# WCOSS1 stuff: 
   #Python:
 #  module load python/3.6.3
 #  module use -a /u/Benjamin.Blake/modulefiles
