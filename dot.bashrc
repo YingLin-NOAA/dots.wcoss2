@@ -130,3 +130,20 @@ export PATH="$PATH":./:/usr/sbin/
 # /opt/pbs/bin/tracejob does not seem to work:
 alias tracejob=/sfs/admin/scripts/tracejob.sh
 
+# FUNCTIONS
+
+function xferlog(){
+    h1=`hostname|cut -c 1-1`
+    if [ $h1 = 'c' ]
+    then
+      machine=cactus
+    elif [ $h1 = 'd' ]
+    then
+      machine=dogwood
+    else
+      echo hostname $hostname not recognized, exit. 
+      exit
+    fi
+    cd /lfs/h1/ops/prod/com/logs/network_monitor/$machine/$(date +"%Y%m%d")
+    }
+
