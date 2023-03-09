@@ -112,6 +112,7 @@ alias killxterms=$SOS/kill_xterms.sh
 alias dcomwatch=$SOS/watch_for.sh
 alias timeleft=$SOS/timeleft.sh
 alias timeleft_watch=$SOS/timeleft_watch.sh
+alias findgap="python $SOS/find_gap.py"
 alias elog="/u/$USER/sos/ecflog_summary.sh"
 # run log as above, then 'view' the output, opening at its end (the script
 # the log summary file name.  Note that "view + `/u/Ying.Lin/sos/ecflog_summary.sh`"
