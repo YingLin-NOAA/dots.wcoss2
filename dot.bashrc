@@ -149,3 +149,7 @@ function xferlog(){
     cd /lfs/h1/ops/prod/com/logs/network_monitor/$machine/$(date +"%Y%m%d")
     }
 
+#
+# Fred's rtdb:
+alias rtdb="sh /u/xinyang.liu/bin/rtdb"
+
