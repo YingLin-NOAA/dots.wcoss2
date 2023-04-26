@@ -151,5 +151,5 @@ function xferlog(){
 
 #
 # Fred's rtdb:
-alias rtdb="sh /u/xinyang.liu/bin/rtdb"
+alias frtdb="sh /u/xinyang.liu/bin/rtdb"
 
