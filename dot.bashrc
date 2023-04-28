@@ -153,3 +153,6 @@ function xferlog(){
 # Fred's rtdb:
 alias frtdb="sh /u/xinyang.liu/bin/rtdb"
 
+# From Justin, 2023/04/28:
+alias nodesum="/sfs/admin/scripts/showcc -n"
+
