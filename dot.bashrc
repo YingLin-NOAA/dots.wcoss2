@@ -100,6 +100,8 @@ alias chkhur='$SOS/chkhur'
 #
 alias freenodes="pbsnodes -av | grep 'state = free' | wc -l"
 #
+alias ops.prod="sudo -i -u ops.prod"
+alias dfprod="sudo -i -u dfprod"
 # save working directory for a failured job on ecf_ui:
 alias chkfail=$SOS/chk_failure.sh
 alias chkw=$SOS/chk_walltime.sh
