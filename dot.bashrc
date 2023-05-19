@@ -116,6 +116,7 @@ alias timeleft=$SOS/timeleft.sh
 alias timeleft_watch=$SOS/timeleft_watch.sh
 alias slownode=/u/diane.stokes/bin/node_runtimes.sh
 alias findgap="python $SOS/find_gap.py"
+alias timediff="python $SOS/timediff.py"
 alias elog="/u/$USER/sos/ecflog_summary.sh"
 # run log as above, then 'view' the output, opening at its end (the script
 # the log summary file name.  Note that "view + `/u/Ying.Lin/sos/ecflog_summary.sh`"
