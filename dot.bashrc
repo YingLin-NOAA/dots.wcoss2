@@ -114,7 +114,6 @@ alias killxterms=$SOS/kill_xterms.sh
 alias dcomwatch=$SOS/watch_for.sh
 alias timeleft=$SOS/timeleft.sh
 alias timeleft_watch=$SOS/timeleft_watch.sh
-alias slownode=/u/diane.stokes/bin/node_runtimes.sh
 alias findgap="python $SOS/find_gap.py"
 alias timediff="python $SOS/timediff.py"
 alias elog="/u/$USER/sos/ecflog_summary.sh"
@@ -158,4 +157,10 @@ alias frtdb="sh /u/xinyang.liu/bin/rtdb"
 
 # From Justin, 2023/04/28:
 alias nodesum="/sfs/admin/scripts/showcc -n"
+
+alias slownode=/u/diane.stokes/bin/node_runtimes.sh
+
+# To use: gchkw /prod/primary/06/gfs/v16.3/gfs/jgfs_forecast
+#         gchkw  /prod/primary/00/hrrr/v4.1/00z/conus/jhrrr_analysis
+alias gchkw='/u/gregory.mott/on_call_tools/daily_general.sh "$(date +"%Y%m%d")" 6'
 
