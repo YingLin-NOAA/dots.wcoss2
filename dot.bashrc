@@ -55,7 +55,7 @@ alias lss='ls -lc --time-style="+%Y%m%d %H:%M:%S"'  # showing seconds
 alias xv=display
 alias cal='cal -s'  # week starts on Sunday
 
-alias mecf=/u/$USER/sos/mecfl_bell.sh
+alias mecf=/u/nco.sos/util/mecfl_bell.sh
 # on wcoss2, vi/view defaults to going to the last location in the file
 #   (tracked by ~/.viminfo).  use the '+1' option to open at the top instead,
 #   for vspalog.  However 'espalog +1' doesn't work. 
@@ -98,7 +98,7 @@ alias grep='grep -a'
 # To view the current SPA on-call file:
 #
 # Check hurricane setup:
-alias chkhur='$SOS/chkhur'
+alias chkhur='/u/nco.sos/util/chkhur'
 #
 alias freenodes="pbsnodes -av | grep 'state = free' | wc -l"
 #
@@ -154,15 +154,18 @@ function xferlog(){
     }
 
 #
+# ------------------- Fred's scripts ----------------------------
 # Fred's rtdb:
-alias frtdb="sh /u/xinyang.liu/bin/rtdb"
+alias frtdb="sh /u/nco.sos/util/rtdb"
+# Fred's check bufr (for obsproc jobs being stuck in an obs type)
+alias chkbufr="sh /u/xinyang.liu/bin/cb"
 
+# ------------------- SPAs --------------------------------------
 # From Justin, 2023/04/28:
 alias nodesum="/sfs/admin/scripts/showcc -n"
 
 alias slownode=/u/diane.stokes/bin/node_runtimes.sh
 
-# To use: gchkw /prod/primary/06/gfs/v16.3/gfs/jgfs_forecast
-#         gchkw  /prod/primary/00/hrrr/v4.1/00z/conus/jhrrr_analysis
+# To use: gchkw jgfs_forecast
 alias gchkw='/u/gregory.mott/on_call_tools/daily_general.sh "$(date +"%Y%m%d")" 6'
 
