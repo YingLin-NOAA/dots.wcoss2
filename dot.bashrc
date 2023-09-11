@@ -11,6 +11,7 @@ fi
 export MAN_POSIXLY_CORRECT=1
 
 export PATH="$PATH:/u/$USER/sos"
+export PATH="$PATH:/u/nco.sos/util"
 export PATH="$PATH:/u/$USER/.dev"
 # for ecf ui:
 module load intel ecflow
@@ -97,9 +98,6 @@ alias grep='grep -a'
 # 2020/06/13 for SOS work:
 # To view the current SPA on-call file:
 #
-# Check hurricane setup:
-alias chkhur='/u/nco.sos/util/chkhur'
-#
 alias freenodes="pbsnodes -av | grep 'state = free' | wc -l"
 #
 alias ops.prod="sudo -i -u ops.prod"
@@ -155,11 +153,11 @@ function xferlog(){
 
 #
 # ------------------- Fred's scripts ----------------------------
-# Fred's rtdb:
+# rtdb:
 alias frtdb="sh /u/nco.sos/util/rtdb"
-# Fred's check bufr (for obsproc jobs being stuck in an obs type)
-alias chkbufr="sh /u/xinyang.liu/bin/cb"
-
+# check bufr (for obsproc jobs being stuck in an obs type)
+alias chkbufr=/u/xinyang.liu/bin/cb
+alias xfer_mon=/u/nco.sos/util/mon-network
 # ------------------- SPAs --------------------------------------
 # From Justin, 2023/04/28:
 alias nodesum="/sfs/admin/scripts/showcc -n"
