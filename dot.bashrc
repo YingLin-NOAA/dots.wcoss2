@@ -12,7 +12,7 @@ export MAN_POSIXLY_CORRECT=1
 
 export PATH="$PATH:/u/$USER/sos"
 export PATH="$PATH:/u/nco.sos/util"
-export PATH="$PATH:/u/$USER/.dev"
+export PATH="$PATH:/u/$USER/.dev:/u/$USER/.dev/bad"
 # for ecf ui:
 module load intel ecflow
 
@@ -163,7 +163,4 @@ alias xfer_mon=/u/nco.sos/util/mon-network
 alias nodesum="/sfs/admin/scripts/showcc -n"
 
 alias slownode=/u/diane.stokes/bin/node_runtimes.sh
-
-# To use: gchkw jgfs_forecast
-alias gchkw='/u/gregory.mott/on_call_tools/daily_general.sh "$(date +"%Y%m%d")" 6'
 
