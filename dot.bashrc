@@ -98,14 +98,13 @@ alias grep='grep -a'
 
 
 # 2020/06/13 for SOS work:
-# To view the current SPA on-call file:
 #
 alias freenodes="pbsnodes -av | grep 'state = free' | wc -l"
 #
 alias ops.prod="sudo -i -u ops.prod"
 alias dfprod="sudo -i -u dfprod"
 # save working directory for a failured job on ecf_ui:
-alias chkfail=$SOS/chk_failure.sh
+#alias chkfail=$SOS/chk_failure.sh
 alias chkw=$SOS/chk_walltime.sh
 alias failed=$SOS/failed.sh
 alias chkdump=$SOS/chk_dump.sh
