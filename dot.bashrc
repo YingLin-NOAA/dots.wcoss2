@@ -164,4 +164,7 @@ alias xfer_mon=/u/nco.sos/util/mon-network
 alias nodesum="/sfs/admin/scripts/showcc -n"
 
 alias slownode=/u/diane.stokes/bin/node_runtimes.sh
+#
+# Greg:
+alias nodes='/sfs/admin/scripts/nqueues.sh'
 
