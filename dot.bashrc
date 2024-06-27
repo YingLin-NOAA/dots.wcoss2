@@ -40,6 +40,7 @@ alias prod='cat /lfs/h1/ops/prod/config/prodmachinefile'
 
 alias dcom='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today'
 alias dcomtxt='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today/wtxtbul' 
+alias dcomnhc='cd /lfs/h1/ops/prod/dcom/nhc/atcf/ncep'
 alias mrms='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms/conus/RadarOnly_QPE'
 alias mrmslmp='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms/conus/MergedReflectivityQCComposite'
 # for jcp_analysis: 
