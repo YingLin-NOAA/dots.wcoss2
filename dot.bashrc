@@ -124,7 +124,7 @@ alias elog="/u/$USER/sos/ecflog_summary.sh"
 alias elogv="view + `elog`"
 
 # Command line inventory for MDL's TDLPACK'd files: 
-alias itdlp=/lfs/h1/ops/prod/packages/blend.v4.2.4/exec/itdlp
+alias itdlp=/lfs/h1/ops/prod/packages/blend.v4.2.5/exec/itdlp
 
 alias ncdump=/apps/prod/hpc-stack/intel-19.1.3.304/netcdf/4.7.4/bin/ncdump
 
