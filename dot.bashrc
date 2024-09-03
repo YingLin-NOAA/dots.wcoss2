@@ -38,9 +38,10 @@ alias logs='cd /lfs/h1/ops/prod/logs'
 
 alias prod='cat /lfs/h1/ops/prod/config/prodmachinefile'
 
-alias dcom='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today'
-alias dcomtxt='today=`date +%Y%m%d`; cd /lfs/h1/ops/prod/dcom/$today/wtxtbul' 
-alias dcomnhc='cd /lfs/h1/ops/prod/dcom/nhc/atcf/ncep'
+alias dcom='cd /lfs/h1/ops/prod/dcom/$(date +"%Y%m%d")'
+alias dcomtxt='cd /lfs/h1/ops/prod/dcom/$(date +"%Y%m%d")/wtxtbul' 
+alias nhc='cd /lfs/h1/ops/prod/dcom/nhc/atcf/ncep'
+alias jtwc='cd /lfs/h1/ops/prod/dcom/$(date +"%Y%m%d")/wtxtbul/storm_data' 
 alias mrms='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms/conus/RadarOnly_QPE'
 alias mrmslmp='cd /lfs/h1/ops/prod/dcom/ldmdata/obs/upperair/mrms/conus/MergedReflectivityQCComposite'
 # for jcp_analysis: 
@@ -70,7 +71,7 @@ alias espalog='/lfs/h1/ops/prod/logs/editspalog'
 
 alias spaoncall='view /lfs/h1/ops/prod/logs/spa.oncall'
 alias sos='cd $SOS'
-alias dev='cd ~/dev'
+alias dev='cd ~/.dev'
 alias dots='cd $DOTS'
 alias where='watch --interval=600 "hostname"'
 alias q='watch --interval=30 "qstat -q"'
@@ -138,26 +139,15 @@ alias tracejob=/sfs/admin/scripts/tracejob.sh
 # FUNCTIONS
 
 function xferlog(){
-    h1=`hostname|cut -c 1-1`
-    if [ $h1 = 'c' ]
-    then
-      machine=cactus
-    elif [ $h1 = 'd' ]
-    then
-      machine=dogwood
-    else
-      echo hostname $hostname not recognized, exit. 
-      exit
-    fi
-    cd /lfs/h1/ops/prod/com/logs/network_monitor/$machine/$(date +"%Y%m%d")
-    }
-
+  machine=`cat /etc/cluster_name`
+  cd /lfs/h1/ops/prod/com/logs/network_monitor/$machine/$(date +"%Y%m%d")
+  }
 #
 # ------------------- Fred's scripts ----------------------------
 # rtdb:
 alias frtdb="sh /u/nco.sos/util/rtdb"
 # check bufr (for obsproc jobs being stuck in an obs type)
-alias chkbufr=/u/xinyang.liu/bin/cb
+# alias chkbufr=/u/xinyang.liu/bin/cb  # 'chkbufr' is now in the sos repo
 alias xfer_mon=/u/nco.sos/util/mon-network
 # ------------------- SPAs --------------------------------------
 # From Justin, 2023/04/28:
