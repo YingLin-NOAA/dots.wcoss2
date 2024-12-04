@@ -142,6 +142,11 @@ function xferlog(){
   machine=`cat /etc/cluster_name`
   cd /lfs/h1/ops/prod/com/logs/network_monitor/$machine/$(date +"%Y%m%d")
   }
+
+function jname(){
+  arg1=$1
+  grep '+ ECF_NAME=' $1
+  }
 #
 # ------------------- Fred's scripts ----------------------------
 # rtdb:
