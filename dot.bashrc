@@ -136,6 +136,8 @@ export PATH="$PATH":./:/usr/sbin/
 # /opt/pbs/bin/tracejob does not seem to work:
 alias tracejob=/sfs/admin/scripts/tracejob.sh
 
+alias runtime="echo -e /lfs/h1/ops/prod/com/logs/runtime/prod/stat/$(date +"%Y%m%d").runtime.stat  '\n'/lfs/h1/ops/prod/com/logs/runtime/prod/daily/$(date +"%Y%m%d").daily"
+
 # FUNCTIONS
 
 function xferlog(){
