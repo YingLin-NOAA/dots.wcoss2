@@ -60,7 +60,9 @@ alias lss='ls -lc --time-style="+%Y%m%d %H:%M:%S"'  # showing seconds
 alias xv=display
 alias cal='cal -s'  # week starts on Sunday
 
-alias mecf=/u/nco.sos/util/mecfl_bell.sh
+#alias mecf=/u/nco.sos/util/mecfl_bell.sh
+alias mecf=~/sos/mecfl_bell.sh
+
 # on wcoss2, vi/view defaults to going to the last location in the file
 #   (tracked by ~/.viminfo).  use the '+1' option to open at the top instead,
 #   for vspalog.  However 'espalog +1' doesn't work. 
