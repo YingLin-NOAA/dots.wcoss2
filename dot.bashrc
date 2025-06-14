@@ -19,8 +19,9 @@ module load intel ecflow
 module load imagemagick/7.0.8-7
 module load prod_util/2.0.9
 
-module load python/3.8.6
-#module load python/3.10.4
+#module load python/3.8.6
+module load python/3.10.4
+alias python=/apps/prod/ve/intel/19.1.3.304/python/3.10.4/mag/5.2/bin/python
 
 module load wgrib2/2.0.8
 
