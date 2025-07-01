@@ -19,10 +19,12 @@ module load intel ecflow
 module load imagemagick/7.0.8-7
 module load prod_util/2.0.9
 
-#v3.8.6 has metpy, 3.10.4 - at least the mag version - does not. 
-#module load python/3.8.6
-module load python/3.10.4
-alias python=/apps/prod/ve/intel/19.1.3.304/python/3.10.4/mag/5.2/bin/python
+# v3.8.6 has metpy, 3.10.4 - at least the mag version - does not.  
+# The 3.10.4/mag has cartopy. 
+module load python/3.8.6
+
+# module load python/3.10.4
+# alias python=/apps/prod/ve/intel/19.1.3.304/python/3.10.4/mag/5.2/bin/python
 
 module load wgrib2/2.0.8
 
@@ -92,16 +94,6 @@ alias kafka=/ifs/kafka/scripts/nelConsole
 
 # In case the file contains an binary character:
 alias grep='grep -a'
-
-# WCOSS1 stuff: 
-  #Python:
-#  module load python/3.6.3
-#  module use -a /u/Benjamin.Blake/modulefiles
-#  export PYTHONPATH=${PYTHONPATH}:/gpfs/dell2/emc/modeling/noscrub/Jacob.Carley/python/lib/python3.6/site-packages
-  # GrADS:
-#  module use -a /usrx/local/dev/modulefiles
-#  module load GrADS/2.2.0
-
 
 # 2020/06/13 for SOS work:
 #
