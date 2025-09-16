@@ -11,8 +11,8 @@ fi
 export MAN_POSIXLY_CORRECT=1
 
 export PATH="$PATH:/u/$USER/sos"
-export PATH="$PATH:/u/nco.sos/util"
-export PATH="$PATH:/u/$USER/.dev:/u/$USER/.dev/bad"
+#export PATH="$PATH:/u/nco.sos/util"
+export PATH="$PATH:/u/$USER/{sos_util}:/u/$USER/.dev:/u/$USER/.dev/bad"
 # for ecf ui:
 module load intel ecflow
 
@@ -64,7 +64,6 @@ alias lss='ls -lc --time-style="+%Y%m%d %H:%M:%S"'  # showing seconds
 alias xv=display
 alias cal='cal -s'  # week starts on Sunday
 
-#alias mecf=/u/nco.sos/util/mecfl_bell.sh
 alias mecf=~/sos/mecfl_bell.sh
 
 # on wcoss2, vi/view defaults to going to the last location in the file
@@ -148,10 +147,10 @@ function jname(){
 #
 # ------------------- Fred's scripts ----------------------------
 # rtdb:
-alias frtdb="sh /u/nco.sos/util/rtdb"
+alias frtdb="sh /u/$USER/sos_util/rtdb"
 # check bufr (for obsproc jobs being stuck in an obs type)
 # alias chkbufr=/u/xinyang.liu/bin/cb  # 'chkbufr' is now in the sos repo
-alias xfer_mon=/u/nco.sos/util/mon-network
+alias xfer_mon=/u/$USER/sos_util/mon-network
 # ------------------- SPAs --------------------------------------
 # From Justin, 2023/04/28:
 alias nodesum="/sfs/admin/scripts/showcc -n"
