@@ -12,7 +12,7 @@ export MAN_POSIXLY_CORRECT=1
 
 export PATH="$PATH:/u/$USER/sos"
 #export PATH="$PATH:/u/nco.sos/util"
-export PATH="$PATH:/u/$USER/{sos_util}:/u/$USER/.dev:/u/$USER/.dev/bad"
+export PATH="$PATH:/u/$USER/sos_util/:/u/$USER/.dev:/u/$USER/.dev/bad"
 # for ecf ui:
 module load intel ecflow
 
