@@ -71,6 +71,7 @@ alias mecf=~/sos/mecfl_bell.sh
 #   for vspalog.  However 'espalog +1' doesn't work. 
 # View the SPA Log:
 alias vspalog='view +1 /lfs/h1/ops/prod/logs/spalog'
+alias lspalog='less /lfs/h1/ops/prod/logs/spalog'
 # Edit the SPA log:
 alias espalog='/lfs/h1/ops/prod/logs/editspalog'
 
