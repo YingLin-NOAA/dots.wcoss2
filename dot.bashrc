@@ -70,7 +70,10 @@ alias mecf=~/sos/mecfl_bell.sh
 #   (tracked by ~/.viminfo).  use the '+1' option to open at the top instead,
 #   for vspalog.  However 'espalog +1' doesn't work. 
 # View the SPA Log:
-alias vspalog='view +1 /lfs/h1/ops/prod/logs/spalog'
+# alias vspalog='view +1 /lfs/h1/ops/prod/logs/spalog'
+# 2025/10/20: 'view' would still create a swap file if buffer is inadvertently
+#   modified.  Do this to prevent all buffer changes:
+alias vspalog='vim -R -n -c "set nomodifiable" +1 /lfs/h1/ops/prod/logs/spalog' 
 alias lspalog='less /lfs/h1/ops/prod/logs/spalog'
 # Edit the SPA log:
 alias espalog='/lfs/h1/ops/prod/logs/editspalog'
