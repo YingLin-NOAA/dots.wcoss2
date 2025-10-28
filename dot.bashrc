@@ -63,6 +63,7 @@ alias lsd='ls -d */'
 alias lss='ls -lc --time-style="+%Y%m%d %H:%M:%S"'  # showing seconds
 alias xv=display
 alias cal='cal -s'  # week starts on Sunday
+alias view='vim -R -n -c "set nomodifiable"'
 
 alias mecf=~/sos/mecfl_bell.sh
 
@@ -78,7 +79,7 @@ alias lspalog='less /lfs/h1/ops/prod/logs/spalog'
 # Edit the SPA log:
 alias espalog='/lfs/h1/ops/prod/logs/editspalog'
 
-alias spaoncall='view /lfs/h1/ops/prod/logs/spa.oncall'
+alias spaoncall='vim -R -n -c "set nomodifiable" /lfs/h1/ops/prod/logs/spa.oncall'
 alias sos='cd $SOS'
 alias dev='cd ~/.dev'
 alias dots='cd $DOTS'
@@ -90,7 +91,7 @@ alias Q='watch --interval=30 "qstat -Q"'
 alias held='qstat -u ops.prod -w | grep " H "'
 alias qprod='qstat -u ops.prod'
 #
-alias sevlog='view + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
+alias sevlog='vim -R -n -c "set nomodifiable" + /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log'
 alias sevtail='watch --interval 30 "grep Sev1 /lfs/h1/ops/prod/com/ecflow/sev_monitor_logs/prevNEL.log | tail"'
 # run this from cmon01/dmon01 (show Sev codes in real time):
 alias kafka=/ifs/kafka/scripts/nelConsole
