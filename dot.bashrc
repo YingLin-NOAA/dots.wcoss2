@@ -157,8 +157,17 @@ alias frtdb="sh /u/$USER/sos_util/rtdb"
 # alias chkbufr=/u/xinyang.liu/bin/cb  # 'chkbufr' is now in the sos repo
 alias xfer_mon=/u/$USER/sos_util/mon-network
 # ------------------- SPAs --------------------------------------
-# From Justin, 2023/04/28:
-alias nodesum="/sfs/admin/scripts/showcc -n"
+# From Justin, 2023/04/28, about 'showcc':
+# define a function that calls the 'showcc', but not showing the CWD/EC info
+#   (we know that already) by cutting off the output after the 'Current Status'
+#   line: 
+function nodesum() {
+  /sfs/admin/scripts/showcc -n | awk '/Current Status/ {print; exit} {print}'
+}
+# This is to run the nodesum (showcc) every 5 minutes:
+export -f nodesum
+alias nodewatch='watch --interval 300 nodesum' 
+
 
 alias slownode=/u/diane.stokes/bin/node_runtimes.sh
 #
